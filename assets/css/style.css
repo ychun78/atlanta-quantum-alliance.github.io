@@ -43,3 +43,17 @@ footer {
   display: block;
 }
 
+.section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.section h2 {
+  margin-top: 0;
+}
+
+.section-alt {
+  background: #f7f7f7;
+}
