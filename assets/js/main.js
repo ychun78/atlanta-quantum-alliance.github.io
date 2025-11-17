@@ -1,7 +1,9 @@
+alert("main.js loaded!");  // TEMP debug line
+
 /* ============================
    PEOPLE MODAL
    ============================ */
-alert("main.js loaded!");
+
 const personCards = document.querySelectorAll(".person-card");
 const personModal = document.getElementById("person-modal");
 
@@ -53,4 +55,14 @@ if (viewButtons.length && eventViews.length) {
       viewButtons.forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
 
-      /
+      // show/hide sections
+      eventViews.forEach(view => {
+        if (view.id === `events-${target}`) {
+          view.classList.add("active");
+        } else {
+          view.classList.remove("active");
+        }
+      });
+    });
+  });
+}
