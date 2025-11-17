@@ -1,7 +1,7 @@
 /* ============================
    PEOPLE MODAL
    ============================ */
-
+alert("main.js loaded!");
 const personCards = document.querySelectorAll(".person-card");
 const personModal = document.getElementById("person-modal");
 
