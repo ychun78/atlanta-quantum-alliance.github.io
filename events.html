@@ -22,25 +22,42 @@
     <hr />
   </header>
 
-  <main>
-    <h2>Events</h2>
-    <p>This page will eventually have a calendar. For now, here is a simple list.</p>
+<main>
+  <h2>Events</h2>
+  <p>Use the buttons below to switch between list view and calendar view.</p>
 
-    <h3>Upcoming Seminars</h3>
+  <div class="view-toggle">
+    <button class="view-btn active" data-view="list">List view</button>
+    <button class="view-btn" data-view="calendar">Calendar view</button>
+  </div>
+
+  <!-- List view -->
+  <section id="events-list" class="event-view active">
+    <h3>Upcoming Events (List)</h3>
     <ul>
       <li>
-        Quantum Seminar: Title TBD — Date, Time, Location
+        <strong>Quantum Seminar:</strong> Title TBD — Date, Time, Location
       </li>
       <li>
-        Joint Colloquium: Title TBD — Date, Time, Location
+        <strong>Joint Colloquium:</strong> Title TBD — Date, Time, Location
+      </li>
+      <li>
+        <strong>Student Defense:</strong> Topic TBD — Date, Time, Location
       </li>
     </ul>
+  </section>
 
-    <h3>Past Events</h3>
-    <ul>
-      <li>Example past seminar — Speaker, date</li>
-    </ul>
-  </main>
+  <!-- Calendar view -->
+  <section id="events-calendar" class="event-view">
+    <h3>Calendar View</h3>
+    <p>This can be replaced with an embedded Google Calendar later.</p>
+    <div class="calendar-placeholder">
+      <!-- Placeholder calendar grid -->
+      <p><em>Calendar placeholder here</em></p>
+    </div>
+  </section>
+</main>
+
 
   <footer>
     <hr />
