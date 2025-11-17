@@ -22,22 +22,52 @@
     <hr />
   </header>
 
-  <main>
-    <h2>People</h2>
-    <p>Below is a placeholder list. Later we’ll add photos and more detailed profiles.</p>
+<main>
+  <h2>People</h2>
+  <p>Click on a person to see more detailed information.</p>
 
-    <h3>Faculty</h3>
-    <ul>
-      <li>Prof. Example One (Georgia Tech) — Quantum information</li>
-      <li>Prof. Example Two (Emory) — Quantum materials</li>
-    </ul>
+  <div class="people-grid">
+    <!-- Person 1 -->
+    <article class="person-card"
+      data-name="Prof. A. Example"
+      data-role="Faculty, Georgia Tech"
+      data-institution="School of Physics, Georgia Tech"
+      data-field="Quantum information, superconducting qubits"
+      data-bio="Prof. Example's group focuses on scalable architectures for superconducting quantum processors and error mitigation.">
+      <img src="assets/img/people/example1.jpg" alt="Prof. A. Example">
+      <h3>Prof. A. Example</h3>
+      <p>Georgia Tech — Quantum Information</p>
+    </article>
 
-    <h3>Students & Postdocs</h3>
-    <ul>
-      <li>Student Name — Graduate student, GaTech</li>
-      <li>Postdoc Name — Emory</li>
-    </ul>
-  </main>
+    <!-- Person 2 -->
+    <article class="person-card"
+      data-name="Prof. B. Sample"
+      data-role="Faculty, Emory University"
+      data-institution="Department of Physics, Emory"
+      data-field="Quantum materials, ultrafast spectroscopy"
+      data-bio="Prof. Sample studies correlated electron systems and quantum materials using ultrafast optical probes.">
+      <img src="assets/img/people/example2.jpg" alt="Prof. B. Sample">
+      <h3>Prof. B. Sample</h3>
+      <p>Emory — Quantum Materials</p>
+    </article>
+
+    <!-- Add more person-card blocks as needed -->
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" id="person-modal" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Close">×</button>
+      <h2 id="modal-name"></h2>
+      <p id="modal-role" class="modal-sub"></p>
+      <p id="modal-institution" class="modal-sub"></p>
+      <p id="modal-field" class="modal-sub"></p>
+      <p id="modal-bio"></p>
+    </div>
+  </div>
+</main>
+
 
   <footer>
     <hr />
