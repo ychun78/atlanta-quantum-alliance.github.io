@@ -1,5 +1,3 @@
-alert("main.js loaded!");  // TEMP debug line
-
 /* ============================
    PEOPLE MODAL
    ============================ */
