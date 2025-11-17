@@ -37,6 +37,31 @@ if (personCards.length && personModal) {
   });
 }
 
+// EVENTS: list vs calendar toggle
+const viewButtons = document.querySelectorAll(".view-btn");
+const eventViews = document.querySelectorAll(".event-view");
+
+if (viewButtons.length && eventViews.length) {
+  viewButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const target = btn.dataset.view; // "list" or "calendar"
+
+      // update button styles
+      viewButtons.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      // show/hide views
+      eventViews.forEach(view => {
+        if (view.id === `events-${target}`) {
+          view.classList.add("active");
+        } else {
+          view.classList.remove("active");
+        }
+      });
+    });
+  });
+}
+
 /* ============================
    EVENTS VIEW TOGGLE
    ============================ */
