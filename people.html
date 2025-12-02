@@ -34,50 +34,95 @@
   </header>
 
   <main>
-    <h2>People</h2>
-    <p>Click on a person to see more detailed information.</p>
+  <h2>People</h2>
+  <p>Click on a person to see more detailed information. Use the filters on the right to narrow the list.</p>
 
+  <div class="people-layout">
+    <!-- Left: people grid -->
     <div class="people-grid">
-      <!-- Person 1 -->
+      <!-- Example: your advisor at Emory -->
       <article class="person-card"
-        data-name="Prof. A. Example"
-        data-role="Faculty, Georgia Tech"
-        data-institution="School of Physics, Georgia Tech"
-        data-field="Quantum information, superconducting qubits"
-        data-bio="Prof. Example's group focuses on scalable architectures for superconducting quantum processors and error mitigation.">
-        <img src="assets/img/people/example1.jpg" alt="Prof. A. Example">
-        <h3>Prof. A. Example</h3>
-        <p>Georgia Tech — Quantum Information</p>
+        data-campus="emory"
+        data-role="faculty"
+        data-focus="condensed-matter"
+        data-name="Prof. Your Advisor"
+        data-field="Condensed matter / quantum materials"
+        data-institution="Emory University, Department of Physics"
+        data-bio="Brief bio about your advisor's work in condensed matter and quantum materials.">
+        <img src="assets/img/people/advisor.jpg" alt="Prof. Your Advisor">
+        <h3>Prof. Your Advisor</h3>
+        <p>Emory — Condensed Matter Physics</p>
       </article>
 
-      <!-- Person 2 -->
+      <!-- Wladimir Benalcazar -->
       <article class="person-card"
-        data-name="Prof. B. Sample"
-        data-role="Faculty, Emory University"
-        data-institution="Department of Physics, Emory University"
-        data-field="Quantum materials, ultrafast spectroscopy"
-        data-bio="Prof. Sample studies correlated electron systems and quantum materials using ultrafast optical probes.">
-        <img src="assets/img/people/example2.jpg" alt="Prof. B. Sample">
-        <h3>Prof. B. Sample</h3>
-        <p>Emory — Quantum Materials</p>
+        data-campus="emory"
+        data-role="faculty"
+        data-focus="condensed-matter"
+        data-name="Prof. Wladimir Benalcazar"
+        data-field="Topological phases, quantum materials"
+        data-institution="Emory University, Department of Physics"
+        data-bio="Prof. Benalcazar works on topological phases of matter and related quantum materials topics.">
+        <img src="assets/img/people/benalcazar.jpg" alt="Prof. Wladimir Benalcazar">
+        <h3>Prof. Wladimir Benalcazar</h3>
+        <p>Emory — Condensed Matter / Topological Phases</p>
       </article>
 
-      <!-- Add more person-card blocks as needed -->
+      <!-- Martin Mourigal -->
+      <article class="person-card"
+        data-campus="gatech"
+        data-role="faculty"
+        data-focus="condensed-matter"
+        data-name="Prof. Martin Mourigal"
+        data-field="Experimental condensed matter, quantum magnetism"
+        data-institution="Georgia Tech, School of Physics"
+        data-bio="Prof. Mourigal studies quantum magnetism and correlated electron systems using neutron scattering and other probes.">
+        <img src="assets/img/people/mourigal.jpg" alt="Prof. Martin Mourigal">
+        <h3>Prof. Martin Mourigal</h3>
+        <p>Georgia Tech — Experimental Condensed Matter</p>
+      </article>
+
+      <!-- Add more people as needed; just follow this pattern -->
     </div>
 
-    <!-- Modal -->
-    <div class="modal" id="person-modal" aria-hidden="true">
-      <div class="modal-backdrop"></div>
-      <div class="modal-content">
-        <button class="modal-close" aria-label="Close">×</button>
-        <h2 id="modal-name"></h2>
-        <p id="modal-role" class="modal-sub"></p>
-        <p id="modal-institution" class="modal-sub"></p>
-        <p id="modal-field" class="modal-sub"></p>
-        <p id="modal-bio"></p>
+    <!-- Right: filters -->
+    <aside class="people-filters">
+      <div class="filter-group">
+        <h3>View by</h3>
+        <label><input type="checkbox" class="filter-campus" value="emory" checked> Emory</label>
+        <label><input type="checkbox" class="filter-campus" value="gatech" checked> Georgia Tech</label>
       </div>
+
+      <div class="filter-group">
+        <h3>Role</h3>
+        <label><input type="checkbox" class="filter-role" value="faculty" checked> Faculty</label>
+        <label><input type="checkbox" class="filter-role" value="postdoc" checked> Postdocs</label>
+        <label><input type="checkbox" class="filter-role" value="student" checked> Students</label>
+      </div>
+
+      <div class="filter-group">
+        <h3>Focus areas</h3>
+        <label><input type="checkbox" class="filter-focus" value="condensed-matter" checked> Condensed Matter / Quantum Materials</label>
+        <label><input type="checkbox" class="filter-focus" value="quantum-info" checked> Quantum Information</label>
+        <label><input type="checkbox" class="filter-focus" value="other" checked> Other</label>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Modal (unchanged) -->
+  <div class="modal" id="person-modal" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Close">×</button>
+      <h2 id="modal-name"></h2>
+      <p id="modal-role" class="modal-sub"></p>
+      <p id="modal-institution" class="modal-sub"></p>
+      <p id="modal-field" class="modal-sub"></p>
+      <p id="modal-bio"></p>
     </div>
-  </main>
+  </div>
+</main>
+
 
   <footer>
     <hr />
