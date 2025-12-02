@@ -2,7 +2,7 @@
    ACCESS CODE LOCK  (optional – remove if not needed)
    ============================================================ */
 
-const ACCESS_CODE = "quantum2024"; // Change to your code
+const ACCESS_CODE = "quantum2025"; // Change to your code
 
 const lockOverlay = document.getElementById("access-lock");
 const codeInput = document.getElementById("access-code-input");
