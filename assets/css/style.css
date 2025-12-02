@@ -329,21 +329,14 @@ footer {
   text-transform: uppercase;
 }
 
-/* Group box with yellow stripe at top */
+/* Clean filter-group (no orange stripes) */
 .filter-group {
   margin-bottom: 1.5rem;
   padding-top: 0.75rem;
-  border-top: 3px solid transparent;
-  background-image: repeating-linear-gradient(
-    to right,
-    #fbbf24,
-    #fbbf24 6px,
-    transparent 6px,
-    transparent 10px
-  );
-  background-position: top left;
-  background-repeat: repeat-x;
+  border-top: 2px solid #ddd; /* simple divider line */
+  background: none;           /* remove the yellow pattern */
 }
+
 
 .filter-group label {
   display: block;
@@ -360,8 +353,12 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .people-filters {
-    position: static;
-    order: -1;
+  .people-filters h3 {
+  margin: 0 0 0.5rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #333;
+  font-weight: bold;
   }
 }
