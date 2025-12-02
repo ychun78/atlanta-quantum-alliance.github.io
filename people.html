@@ -8,17 +8,6 @@
   <script src="assets/js/main.js" defer></script>
 </head>
 <body>
-  <div id="access-lock" class="access-lock">
-    <div class="access-lock-box">
-      <h2>Atlanta Quantum Alliance – Internal Preview</h2>
-      <p>Please enter the access code provided by the organizers.</p>
-      <input type="password" id="access-code-input" placeholder="Access code">
-      <button id="access-code-submit">Enter</button>
-      <p id="access-error" class="access-error" style="display:none;">
-        Incorrect code. Please try again.
-      </p>
-    </div>
-  </div>
   <header>
     <h1>Atlanta Quantum Alliance</h1>
     <p>A joint initiative between Georgia Tech and Emory.</p>
@@ -34,95 +23,333 @@
   </header>
 
   <main>
-  <h2>People</h2>
-  <p>Click on a person to see more detailed information. Use the filters on the right to narrow the list.</p>
+    <h2>People</h2>
+    <p>
+      This directory currently lists Emory and Georgia Tech faculty working in
+      condensed matter, optics, and physical chemistry. Click a card to view
+      more information, and use the filters on the right to sort by school and
+      focus area.
+    </p>
 
-  <div class="people-layout">
-    <!-- Left: people grid -->
-    <div class="people-grid">
-      <!-- Example: your advisor at Emory -->
-      <article class="person-card"
-        data-campus="emory"
-        data-role="faculty"
-        data-focus="condensed-matter"
-        data-name="Prof. Your Advisor"
-        data-field="Condensed matter / quantum materials"
-        data-institution="Emory University, Department of Physics"
-        data-bio="Brief bio about your advisor's work in condensed matter and quantum materials.">
-        <img src="assets/img/people/advisor.jpg" alt="Prof. Your Advisor">
-        <h3>Prof. Your Advisor</h3>
-        <p>Emory — Condensed Matter Physics</p>
-      </article>
+    <div class="people-layout">
+      <!-- LEFT: PEOPLE GRID -->
+      <div class="people-grid">
 
-      <!-- Wladimir Benalcazar -->
-      <article class="person-card"
-        data-campus="emory"
-        data-role="faculty"
-        data-focus="condensed-matter"
-        data-name="Prof. Wladimir Benalcazar"
-        data-field="Topological phases, quantum materials"
-        data-institution="Emory University, Department of Physics"
-        data-bio="Prof. Benalcazar works on topological phases of matter and related quantum materials topics.">
-        <img src="assets/img/people/benalcazar.jpg" alt="Prof. Wladimir Benalcazar">
-        <h3>Prof. Wladimir Benalcazar</h3>
-        <p>Emory — Condensed Matter / Topological Phases</p>
-      </article>
+        <!-- =========================
+             EMORY PHYSICS – CONDENSED MATTER / OPTICS
+             ========================= -->
 
-      <!-- Martin Mourigal -->
-      <article class="person-card"
-        data-campus="gatech"
-        data-role="faculty"
-        data-focus="condensed-matter"
-        data-name="Prof. Martin Mourigal"
-        data-field="Experimental condensed matter, quantum magnetism"
-        data-institution="Georgia Tech, School of Physics"
-        data-bio="Prof. Mourigal studies quantum magnetism and correlated electron systems using neutron scattering and other probes.">
-        <img src="assets/img/people/mourigal.jpg" alt="Prof. Martin Mourigal">
-        <h3>Prof. Martin Mourigal</h3>
-        <p>Georgia Tech — Experimental Condensed Matter</p>
-      </article>
+        <!-- Wladimir Benalcazar -->
+        <article class="person-card"
+          data-campus="emory"
+          data-focus="condensed-matter"
+          data-name="Wladimir Benalcazar"
+          data-role="Assistant Professor of Physics"
+          data-institution="Emory University, Department of Physics"
+          data-field="Topological phases of matter, quantum materials"
+          data-bio="Focus area: Condensed matter / quantum materials. Add office, email, phone, and group website here.">
+          <img src="assets/img/people/benalcazar.jpg" alt="Wladimir Benalcazar">
+          <h3>Wladimir Benalcazar</h3>
+          <p>Assistant Professor of Physics — Emory</p>
+          <p>Focus: Condensed matter / topological phases</p>
+        </article>
 
-      <!-- Add more people as needed; just follow this pattern -->
+        <!-- Hayk Harutyunyan -->
+        <article class="person-card"
+          data-campus="emory"
+          data-focus="optics"
+          data-name="Hayk Harutyunyan"
+          data-role="Professor of Physics"
+          data-institution="Emory University, Department of Physics"
+          data-field="Optics, photonics, quantum light–matter interactions"
+          data-bio="Focus area: Optics / photonics. Add office, email, phone, and group website here.">
+          <img src="assets/img/people/harutyunyan.jpg" alt="Hayk Harutyunyan">
+          <h3>Hayk Harutyunyan</h3>
+          <p>Professor of Physics — Emory</p>
+          <p>Focus: Optics / photonics</p>
+        </article>
+
+        <!-- Jiang-Xiazi Lin -->
+        <article class="person-card"
+          data-campus="emory"
+          data-focus="condensed-matter"
+          data-name="Jiang-Xiazi Lin"
+          data-role="Assistant Professor of Physics"
+          data-institution="Emory University, Department of Physics"
+          data-field="Quantum materials, low-dimensional systems"
+          data-bio="Focus area: Condensed matter / quantum materials. Add office, email, phone, and group website here.">
+          <img src="assets/img/people/lin_jiangxiazi.jpg" alt="Jiang-Xiazi Lin">
+          <h3>Jiang-Xiazi Lin</h3>
+          <p>Assistant Professor of Physics — Emory</p>
+          <p>Focus: Quantum materials</p>
+        </article>
+
+        <!-- Luiz Santos -->
+        <article class="person-card"
+          data-campus="emory"
+          data-focus="condensed-matter"
+          data-name="Luiz Santos"
+          data-role="Associate Professor of Physics"
+          data-institution="Emory University, Department of Physics"
+          data-field="Correlated electron systems, quantum phases of matter"
+          data-bio="Focus area: Condensed matter / quantum materials. Add office, email, phone, and group website here.">
+          <img src="assets/img/people/santos.jpg" alt="Luiz Santos">
+          <h3>Luiz Santos</h3>
+          <p>Associate Professor of Physics — Emory</p>
+          <p>Focus: Correlated electron systems</p>
+        </article>
+
+        <!-- Ajit Srivastava -->
+        <article class="person-card"
+          data-campus="emory"
+          data-focus="optics"
+          data-name="Ajit Srivastava"
+          data-role="Associate Professor of Physics"
+          data-institution="Emory University, Department of Physics"
+          data-field="2D materials, excitons, quantum optics"
+          data-bio="Focus area: Optics / 2D materials. Add office, email, phone, and group website here.">
+          <img src="assets/img/people/srivastava.jpg" alt="Ajit Srivastava">
+          <h3>Ajit Srivastava</h3>
+          <p>Associate Professor of Physics — Emory</p>
+          <p>Focus: Optics in 2D materials</p>
+        </article>
+
+        <!-- Sergei Urazhdin -->
+        <article class="person-card"
+          data-campus="emory"
+          data-focus="condensed-matter"
+          data-name="Sergei Urazhdin"
+          data-role="Samuel Candler Dobbs Professor of Physics"
+          data-institution="Emory University, Department of Physics"
+          data-field="Spintronics, nanomagnetism, quantum devices"
+          data-bio="Focus area: Condensed matter / spintronics. Add office, email, phone, and group website here.">
+          <img src="assets/img/people/urazhdin.jpg" alt="Sergei Urazhdin">
+          <h3>Sergei Urazhdin</h3>
+          <p>Samuel Candler Dobbs Professor of Physics — Emory</p>
+          <p>Focus: Spintronics & nanomagnetism</p>
+        </article>
+
+        <!-- Martin Mourigal (GaTech Physics) -->
+        <article class="person-card"
+          data-campus="gatech"
+          data-focus="condensed-matter"
+          data-name="Martin Mourigal"
+          data-role="Associate Professor of Physics"
+          data-institution="Georgia Tech, School of Physics"
+          data-field="Experimental condensed matter, quantum magnetism"
+          data-bio="Focus area: Experimental condensed matter / quantum magnetism. Add office, email, phone, and group website here.">
+          <img src="assets/img/people/mourigal.jpg" alt="Martin Mourigal">
+          <h3>Martin Mourigal</h3>
+          <p>Associate Professor of Physics — Georgia Tech</p>
+          <p>Focus: Quantum magnetism</p>
+        </article>
+
+        <!-- =========================
+             EMORY CHEMISTRY – PHYSICAL (EXPERIMENTAL)
+             ========================= -->
+
+        <!-- Katherine M. Davis -->
+        <article class="person-card"
+          data-campus="emory"
+          data-focus="physical-experimental"
+          data-name="Katherine M. Davis"
+          data-role="Assistant Professor of Chemistry"
+          data-institution="Emory University, Department of Chemistry"
+          data-field="Physical chemistry, spectroscopy"
+          data-bio="Focus area: Physical chemistry — experimental. Add office (Emerson E403), email, phone, and group website here.">
+          <img src="assets/img/people/davis_katherine.jpg" alt="Katherine M. Davis">
+          <h3>Katherine M. Davis</h3>
+          <p>Assistant Professor of Chemistry — Emory</p>
+          <p>Focus: Physical chemistry (experimental)</p>
+        </article>
+
+        <!-- Letian Dou -->
+        <article class="person-card"
+          data-campus="emory"
+          data-focus="physical-experimental"
+          data-name="Letian Dou"
+          data-role="Paul &amp; Phyllis Fireman Professor of Chemistry"
+          data-institution="Emory University, Department of Chemistry"
+          data-field="Hybrid materials, optoelectronics"
+          data-bio="Focus area: Physical chemistry — experimental. Add office (Atwood 430), email, phone, and group website here.">
+          <img src="assets/img/people/dou.jpg" alt="Letian Dou">
+          <h3>Letian Dou</h3>
+          <p>Professor of Chemistry — Emory</p>
+          <p>Focus: Hybrid materials & optoelectronics</p>
+        </article>
+
+        <!-- Brian Dyer -->
+        <article class="person-card"
+          data-campus="emory"
+          data-focus="physical-experimental"
+          data-name="Brian Dyer"
+          data-role="Samuel Candler Dobbs Professor of Chemistry"
+          data-institution="Emory University, Department of Chemistry"
+          data-field="Ultrafast spectroscopy, biophysical chemistry"
+          data-bio="Focus area: Physical chemistry — experimental. Add office (Atwood 443), email, phone, and group website here.">
+          <img src="assets/img/people/dyer.jpg" alt="Brian Dyer">
+          <h3>Brian Dyer</h3>
+          <p>Samuel Candler Dobbs Professor of Chemistry — Emory</p>
+          <p>Focus: Ultrafast & biophysical chemistry</p>
+        </article>
+
+        <!-- Michael C. Heaven -->
+        <article class="person-card"
+          data-campus="emory"
+          data-focus="physical-experimental"
+          data-name="Michael C. Heaven"
+          data-role="Samuel Candler Dobbs Professor of Chemistry"
+          data-institution="Emory University, Department of Chemistry"
+          data-field="Chemical bonding, transient intermediates, electronic structure"
+          data-bio="Focus area: Physical chemistry — experimental. Add office (Atwood 230), email, phone, and group website here.">
+          <img src="assets/img/people/heaven.jpg" alt="Michael C. Heaven">
+          <h3>Michael C. Heaven</h3>
+          <p>Samuel Candler Dobbs Professor of Chemistry — Emory</p>
+          <p>Focus: Chemical bonding & electronic structure</p>
+        </article>
+
+        <!-- Lili Wang -->
+        <article class="person-card"
+          data-campus="emory"
+          data-focus="physical-experimental"
+          data-name="Lili Wang"
+          data-role="Assistant Professor of Chemistry"
+          data-institution="Emory University, Department of Chemistry"
+          data-field="Physical chemistry, spectroscopy"
+          data-bio="Focus area: Physical chemistry — experimental. Add office (Atwood 457), email, phone, and group website here.">
+          <img src="assets/img/people/wang_lili.jpg" alt="Lili Wang">
+          <h3>Lili Wang</h3>
+          <p>Assistant Professor of Chemistry — Emory</p>
+          <p>Focus: Physical chemistry (experimental)</p>
+        </article>
+
+        <!-- =========================
+             EMORY CHEMISTRY – PHYSICAL (THEORETICAL)
+             ========================= -->
+
+        <!-- Francesco Evangelista -->
+        <article class="person-card"
+          data-campus="emory"
+          data-focus="physical-theoretical"
+          data-name="Francesco Evangelista"
+          data-role="Winship Distinguished Professor of Chemistry"
+          data-institution="Emory University, Department of Chemistry"
+          data-field="Electronic structure theory, quantum chemistry"
+          data-bio="Focus area: Physical chemistry — theoretical. Add office (Emerson E519), email, phone, and group website here.">
+          <img src="assets/img/people/evangelista.jpg" alt="Francesco Evangelista">
+          <h3>Francesco Evangelista</h3>
+          <p>Winship Distinguished Professor of Chemistry — Emory</p>
+          <p>Focus: Electronic structure theory</p>
+        </article>
+
+        <!-- James T. Kindt -->
+        <article class="person-card"
+          data-campus="emory"
+          data-focus="physical-theoretical"
+          data-name="James T. Kindt"
+          data-role="Professor of Chemistry"
+          data-institution="Emory University, Department of Chemistry"
+          data-field="Statistical mechanics, soft matter, theory"
+          data-bio="Focus area: Physical chemistry — theoretical. Add office (Emerson E521), email, phone, and group website here.">
+          <img src="assets/img/people/kindt.jpg" alt="James T. Kindt">
+          <h3>James T. Kindt</h3>
+          <p>Professor of Chemistry — Emory</p>
+          <p>Focus: Theory & soft matter</p>
+        </article>
+
+        <!-- Fang Liu -->
+        <article class="person-card"
+          data-campus="emory"
+          data-focus="physical-theoretical"
+          data-name="Fang Liu"
+          data-role="Assistant Professor of Chemistry"
+          data-institution="Emory University, Department of Chemistry"
+          data-field="Theoretical and computational chemistry"
+          data-bio="Focus area: Physical chemistry — theoretical. Add office (Emerson E523), email, phone, and group website here.">
+          <img src="assets/img/people/liu_fang.jpg" alt="Fang Liu">
+          <h3>Fang Liu</h3>
+          <p>Assistant Professor of Chemistry — Emory</p>
+          <p>Focus: Theoretical & computational chemistry</p>
+        </article>
+
+        <!-- Djamaladdin (Jamal) Musaev -->
+        <article class="person-card"
+          data-campus="emory"
+          data-focus="physical-theoretical"
+          data-name="Djamaladdin (Jamal) Musaev"
+          data-role="Associate Faculty, Center for Scientific Computation"
+          data-institution="Emory University, Department of Chemistry"
+          data-field="Computational catalysis, electronic structure"
+          data-bio="Focus area: Physical chemistry — theoretical. Add office (Emerson Center), email, phone, and group website here.">
+          <img src="assets/img/people/musaev.jpg" alt="Djamaladdin (Jamal) Musaev">
+          <h3>Djamaladdin (Jamal) Musaev</h3>
+          <p>Associated Faculty — Emory</p>
+          <p>Focus: Computational catalysis</p>
+        </article>
+
+        <!-- Raphael F. Ribeiro -->
+        <article class="person-card"
+          data-campus="emory"
+          data-focus="physical-theoretical"
+          data-name="Raphael F. Ribeiro"
+          data-role="Assistant Professor of Chemistry"
+          data-institution="Emory University, Department of Chemistry"
+          data-field="Molecular polaritons, quantum dynamics"
+          data-bio="Focus area: Physical chemistry — theoretical. Add office (Emerson E520), email, phone, and group website here.">
+          <img src="assets/img/people/ribeiro.jpg" alt="Raphael F. Ribeiro">
+          <h3>Raphael F. Ribeiro</h3>
+          <p>Assistant Professor of Chemistry — Emory</p>
+          <p>Focus: Molecular polaritons & quantum dynamics</p>
+        </article>
+
+        <!-- Yao Wang -->
+        <article class="person-card"
+          data-campus="emory"
+          data-focus="physical-theoretical"
+          data-name="Yao Wang"
+          data-role="Assistant Professor of Chemistry"
+          data-institution="Emory University, Department of Chemistry"
+          data-field="Theoretical chemistry, materials modeling"
+          data-bio="Focus area: Physical chemistry — theoretical. Add office (Emerson E524), email, phone, and group website here.">
+          <img src="assets/img/people/wang_yao.jpg" alt="Yao Wang">
+          <h3>Yao Wang</h3>
+          <p>Assistant Professor of Chemistry — Emory</p>
+          <p>Focus: Theoretical chemistry & materials</p>
+        </article>
+
+      </div> <!-- end .people-grid -->
+
+      <!-- RIGHT: FILTERS -->
+      <aside class="people-filters">
+        <div class="filter-group">
+          <h3>School</h3>
+          <label><input type="checkbox" class="filter-campus" value="emory" checked> Emory</label>
+          <label><input type="checkbox" class="filter-campus" value="gatech" checked> Georgia Tech</label>
+        </div>
+
+        <div class="filter-group">
+          <h3>Focus areas</h3>
+          <label><input type="checkbox" class="filter-focus" value="condensed-matter" checked> Condensed matter / quantum materials</label>
+          <label><input type="checkbox" class="filter-focus" value="optics" checked> Optics / photonics</label>
+          <label><input type="checkbox" class="filter-focus" value="physical-experimental" checked> Physical chemistry — experimental</label>
+          <label><input type="checkbox" class="filter-focus" value="physical-theoretical" checked> Physical chemistry — theoretical</label>
+        </div>
+      </aside>
     </div>
 
-    <!-- Right: filters -->
-    <aside class="people-filters">
-      <div class="filter-group">
-        <h3>View by</h3>
-        <label><input type="checkbox" class="filter-campus" value="emory" checked> Emory</label>
-        <label><input type="checkbox" class="filter-campus" value="gatech" checked> Georgia Tech</label>
+    <!-- Modal -->
+    <div class="modal" id="person-modal" aria-hidden="true">
+      <div class="modal-backdrop"></div>
+      <div class="modal-content">
+        <button class="modal-close" aria-label="Close">×</button>
+        <h2 id="modal-name"></h2>
+        <p id="modal-role" class="modal-sub"></p>
+        <p id="modal-institution" class="modal-sub"></p>
+        <p id="modal-field" class="modal-sub"></p>
+        <p id="modal-bio"></p>
       </div>
-
-      <div class="filter-group">
-        <h3>Role</h3>
-        <label><input type="checkbox" class="filter-role" value="faculty" checked> Faculty</label>
-        <label><input type="checkbox" class="filter-role" value="postdoc" checked> Postdocs</label>
-        <label><input type="checkbox" class="filter-role" value="student" checked> Students</label>
-      </div>
-
-      <div class="filter-group">
-        <h3>Focus areas</h3>
-        <label><input type="checkbox" class="filter-focus" value="condensed-matter" checked> Condensed Matter / Quantum Materials</label>
-        <label><input type="checkbox" class="filter-focus" value="quantum-info" checked> Quantum Information</label>
-        <label><input type="checkbox" class="filter-focus" value="other" checked> Other</label>
-      </div>
-    </aside>
-  </div>
-
-  <!-- Modal (unchanged) -->
-  <div class="modal" id="person-modal" aria-hidden="true">
-    <div class="modal-backdrop"></div>
-    <div class="modal-content">
-      <button class="modal-close" aria-label="Close">×</button>
-      <h2 id="modal-name"></h2>
-      <p id="modal-role" class="modal-sub"></p>
-      <p id="modal-institution" class="modal-sub"></p>
-      <p id="modal-field" class="modal-sub"></p>
-      <p id="modal-bio"></p>
     </div>
-  </div>
-</main>
-
+  </main>
 
   <footer>
     <hr />
