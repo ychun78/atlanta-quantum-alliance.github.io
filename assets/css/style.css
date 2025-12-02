@@ -213,3 +213,85 @@ footer {
   color: #b91c1c;
   margin-top: 0.5rem;
 }
+
+.event-legend {
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+}
+
+.legend-item {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  margin-right: 0.4rem;
+  margin-bottom: 0.3rem;
+  border: 1px solid transparent;
+}
+
+/* Legend colors */
+.legend-quantum,
+.cal-quantum {
+  background: #e0f2fe;
+  border-color: #0284c7;
+}
+
+.legend-colloquium,
+.cal-colloquium {
+  background: #fef3c7;
+  border-color: #d97706;
+}
+
+.legend-conference,
+.cal-conference {
+  background: #ede9fe;
+  border-color: #7c3aed;
+}
+
+.legend-defense,
+.cal-defense {
+  background: #fee2e2;
+  border-color: #b91c1c;
+}
+
+.legend-special,
+.cal-special {
+  background: #dcfce7;
+  border-color: #16a34a;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.3rem;
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+}
+
+.calendar-header {
+  padding: 0.3rem;
+  background: #f3f4f6;
+  font-weight: bold;
+  text-align: center;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.calendar-day {
+  min-height: 80px;
+  padding: 0.3rem;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  font-size: 0.8rem;
+  vertical-align: top;
+}
+
+.day-number {
+  font-weight: bold;
+}
+
+.cal-event {
+  margin-top: 0.2rem;
+  padding: 0.15rem 0.25rem;
+  border-radius: 4px;
+  border: 1px solid transparent;
+}
