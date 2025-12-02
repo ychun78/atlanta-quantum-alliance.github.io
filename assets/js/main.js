@@ -1,95 +1,37 @@
-/* ACCESS CODE LOCK */
-const ACCESS_CODE = "quantum2024"; // change this to whatever you want
+/* ============================================================
+   ACCESS CODE LOCK  (optional – remove if not needed)
+   ============================================================ */
+
+const ACCESS_CODE = "quantum2024"; // Change to your code
 
 const lockOverlay = document.getElementById("access-lock");
 const codeInput = document.getElementById("access-code-input");
 const codeSubmit = document.getElementById("access-code-submit");
 const errorMsg = document.getElementById("access-error");
 
-// Only run on pages that have the overlay
 if (lockOverlay && codeInput && codeSubmit) {
-  // If already unlocked in this browser session, hide overlay immediately
+
   if (sessionStorage.getItem("aqa-unlocked") === "true") {
     lockOverlay.style.display = "none";
-  } else {
-    codeSubmit.addEventListener("click", () => {
-      if (codeInput.value.trim() === ACCESS_CODE) {
-        lockOverlay.style.display = "none";
-        sessionStorage.setItem("aqa-unlocked", "true");
-      } else {
-        errorMsg.style.display = "block";
-      }
-    });
-
-    codeInput.addEventListener("keydown", e => {
-      if (e.key === "Enter") codeSubmit.click();
-    });
   }
+
+  codeSubmit.addEventListener("click", () => {
+    if (codeInput.value.trim() === ACCESS_CODE) {
+      lockOverlay.style.display = "none";
+      sessionStorage.setItem("aqa-unlocked", "true");
+    } else {
+      errorMsg.style.display = "block";
+    }
+  });
+
+  codeInput.addEventListener("keydown", e => {
+    if (e.key === "Enter") codeSubmit.click();
+  });
 }
 
-/* ============================
+
+/* ============================================================
    PEOPLE MODAL
-   ============================ */
+   ============================================================ */
 
-const personCards = document.querySelectorAll(".person-card");
-const personModal = document.getElementById("person-modal");
-
-if (personCards.length && personModal) {
-  const nameEl = document.getElementById("modal-name");
-  const roleEl = document.getElementById("modal-role");
-  const instEl = document.getElementById("modal-institution");
-  const fieldEl = document.getElementById("modal-field");
-  const bioEl = document.getElementById("modal-bio");
-
-  const closeBtn = personModal.querySelector(".modal-close");
-  const backdrop = personModal.querySelector(".modal-backdrop");
-
-  const closeModal = () => {
-    personModal.classList.remove("open");
-  };
-
-  personCards.forEach(card => {
-    card.addEventListener("click", () => {
-      nameEl.textContent = card.dataset.name || "";
-      roleEl.textContent = card.dataset.role || "";
-      instEl.textContent = card.dataset.institution || "";
-      fieldEl.textContent = card.dataset.field || "";
-      bioEl.textContent = card.dataset.bio || "";
-      personModal.classList.add("open");
-    });
-  });
-
-  closeBtn.addEventListener("click", closeModal);
-  backdrop.addEventListener("click", closeModal);
-  document.addEventListener("keydown", e => {
-    if (e.key === "Escape") closeModal();
-  });
-}
-
-/* ============================
-   EVENTS VIEW TOGGLE
-   ============================ */
-
-const viewButtons = document.querySelectorAll(".view-btn");
-const eventViews = document.querySelectorAll(".event-view");
-
-if (viewButtons.length && eventViews.length) {
-  viewButtons.forEach(btn => {
-    btn.addEventListener("click", () => {
-      const target = btn.dataset.view; // "list" or "calendar"
-
-      // update button active state
-      viewButtons.forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
-
-      // show/hide sections
-      eventViews.forEach(view => {
-        if (view.id === `events-${target}`) {
-          view.classList.add("active");
-        } else {
-          view.classList.remove("active");
-        }
-      });
-    });
-  });
-}
+const personCards = document.querySelectorAll(".pe
