@@ -1,3 +1,32 @@
+/* ACCESS CODE LOCK */
+const ACCESS_CODE = "quantum2024"; // change this to whatever you want
+
+const lockOverlay = document.getElementById("access-lock");
+const codeInput = document.getElementById("access-code-input");
+const codeSubmit = document.getElementById("access-code-submit");
+const errorMsg = document.getElementById("access-error");
+
+// Only run on pages that have the overlay
+if (lockOverlay && codeInput && codeSubmit) {
+  // If already unlocked in this browser session, hide overlay immediately
+  if (sessionStorage.getItem("aqa-unlocked") === "true") {
+    lockOverlay.style.display = "none";
+  } else {
+    codeSubmit.addEventListener("click", () => {
+      if (codeInput.value.trim() === ACCESS_CODE) {
+        lockOverlay.style.display = "none";
+        sessionStorage.setItem("aqa-unlocked", "true");
+      } else {
+        errorMsg.style.display = "block";
+      }
+    });
+
+    codeInput.addEventListener("keydown", e => {
+      if (e.key === "Enter") codeSubmit.click();
+    });
+  }
+}
+
 /* ============================
    PEOPLE MODAL
    ============================ */
