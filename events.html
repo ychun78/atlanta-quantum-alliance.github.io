@@ -59,15 +59,53 @@
   </section>
 
   <!-- Calendar view -->
-  <section id="events-calendar" class="event-view">
-    <h3>Calendar View</h3>
-    <p>This can be replaced with an embedded Google Calendar later.</p>
-    <div class="calendar-placeholder">
-      <!-- Placeholder calendar grid -->
-      <p><em>Calendar placeholder here</em></p>
+<section id="events-calendar" class="event-view">
+  <h3>Calendar View (Sample Month)</h3>
+
+  <div class="event-legend">
+    <span class="legend-item legend-quantum">Quantum seminar</span>
+    <span class="legend-item legend-colloquium">Department colloquium</span>
+    <span class="legend-item legend-conference">Conference / workshop</span>
+    <span class="legend-item legend-defense">Student defense</span>
+    <span class="legend-item legend-special">Special seminar</span>
+  </div>
+
+  <div class="calendar-grid">
+    <div class="calendar-header">Mon</div>
+    <div class="calendar-header">Tue</div>
+    <div class="calendar-header">Wed</div>
+    <div class="calendar-header">Thu</div>
+    <div class="calendar-header">Fri</div>
+
+    <!-- Row 1 -->
+    <div class="calendar-day">
+      <span class="day-number">1</span>
     </div>
-  </section>
-</main>
+    <div class="calendar-day">
+      <span class="day-number">2</span>
+    </div>
+    <div class="calendar-day">
+      <span class="day-number">3</span>
+      <div class="cal-event cal-quantum">
+        Joint Quantum Seminar<br>
+        3:00–4:00 PM
+      </div>
+    </div>
+    <div class="calendar-day">
+      <span class="day-number">4</span>
+    </div>
+    <div class="calendar-day">
+      <span class="day-number">5</span>
+      <div class="cal-event cal-colloquium">
+        GT Physics Colloquium<br>
+        4:00–5:00 PM
+      </div>
+    </div>
+
+    <!-- Add more days as needed (this is just a sample row) -->
+  </div>
+</section>
+
 
 
   <footer>
