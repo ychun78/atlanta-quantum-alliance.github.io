@@ -1,3 +1,7 @@
+/* ============================================================
+   GLOBAL
+   ============================================================ */
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -36,26 +40,19 @@ footer {
   color: #555;
 }
 
-.hero-img {
-  width: 100%;
-  max-height: 300px;
-  object-fit: cover;
-  display: block;
+/* ============================================================
+   PEOPLE PAGE LAYOUT
+   ============================================================ */
+
+.people-main {
+  max-width: 1200px;
 }
 
-.section {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 3rem 1rem;
-  border-bottom: 1px solid #ddd;
-}
-
-.section h2 {
-  margin-top: 0;
-}
-
-.section-alt {
-  background: #f7f7f7;
+.people-layout {
+  display: grid;
+  grid-template-columns: 3fr 1.2fr;
+  gap: 2rem;
+  margin: 2rem 0 3rem;
 }
 
 .people-grid {
@@ -65,14 +62,18 @@ footer {
   margin: 2rem 0 3rem;
 }
 
+/* ============================================================
+   PERSON CARD
+   ============================================================ */
+
 .person-card {
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 1rem;
   cursor: pointer;
-  background: #fff;
+  background: #ffffff;
   transition: box-shadow 0.15s ease, transform 0.15s ease;
-  display: none;
+  display: block;
 }
 
 .person-card img {
@@ -83,12 +84,101 @@ footer {
   margin-bottom: 0.75rem;
 }
 
+.person-card h3 {
+  margin: 0.25rem 0 0.4rem;
+  font-size: 1.05rem;
+}
+
+.person-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #444;
+}
+
 .person-card:hover {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
   transform: translateY(-2px);
 }
 
-/* Modal */
+/* ============================================================
+   FILTER PANEL
+   ============================================================ */
+
+.people-filters {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fafafa;
+  font-size: 0.9rem;
+  padding: 1rem 1.25rem;
+  align-self: flex-start;
+  position: sticky;
+  top: 120px;
+}
+
+.people-filters h3 {
+  margin: 0 0 0.5rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.filter-group {
+  margin-bottom: 1.5rem;
+  padding-top: 0.75rem;
+  border-top: 2px solid #ddd;
+}
+
+.filter-group label {
+  display: block;
+  margin: 0.35rem 0;
+}
+
+.filter-group input[type="checkbox"] {
+  margin-right: 0.4rem;
+}
+
+/* ============================================================
+   ADVANCED SEARCH
+   ============================================================ */
+
+.advanced-search {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  padding: 0.75rem 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.advanced-search summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: #003366;
+}
+
+.advanced-body {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.adv-row {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 0.75rem;
+  align-items: center;
+  margin: 0.6rem 0;
+}
+
+#people-keyword {
+  width: 100%;
+  padding: 0.45rem 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* ============================================================
+   MODAL
+   ============================================================ */
+
 .modal {
   position: fixed;
   inset: 0;
@@ -110,7 +200,7 @@ footer {
   position: relative;
   max-width: 600px;
   margin: 10vh auto;
-  background: #fff;
+  background: #ffffff;
   padding: 1.5rem 1.75rem 2rem;
   border-radius: 10px;
 }
@@ -131,43 +221,10 @@ footer {
   color: #555;
 }
 
-.view-toggle {
-  margin: 1rem 0 1.5rem;
-}
+/* ============================================================
+   ACCESS CODE OVERLAY
+   ============================================================ */
 
-.view-btn {
-  border: 1px solid #003366;
-  background: #fff;
-  color: #003366;
-  padding: 0.4rem 0.9rem;
-  margin-right: 0.5rem;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 0.9rem;
-}
-
-.view-btn.active {
-  background: #003366;
-  color: #fff;
-}
-
-.event-view {
-  display: none;
-}
-
-.event-view.active {
-  display: block;
-}
-
-.calendar-placeholder {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 2rem;
-  text-align: center;
-  background: #f9f9f9;
-}
-
-/* Access code overlay */
 .access-lock {
   position: fixed;
   inset: 0;
@@ -188,15 +245,10 @@ footer {
   text-align: center;
 }
 
-.access-lock-box h2 {
-  margin-top: 0;
-}
-
 .access-lock-box input {
   width: 100%;
   padding: 0.5rem;
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
+  margin: 0.75rem 0;
   border-radius: 4px;
   border: 1px solid #ccc;
 }
@@ -206,7 +258,7 @@ footer {
   border-radius: 4px;
   border: none;
   background: #003366;
-  color: #fff;
+  color: #ffffff;
   cursor: pointer;
 }
 
@@ -215,186 +267,16 @@ footer {
   margin-top: 0.5rem;
 }
 
-.event-legend {
-  margin: 1rem 0;
-  font-size: 0.85rem;
-}
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
 
-.legend-item {
-  display: inline-block;
-  padding: 0.2rem 0.5rem;
-  border-radius: 999px;
-  margin-right: 0.4rem;
-  margin-bottom: 0.3rem;
-  border: 1px solid transparent;
-}
-
-/* Legend + event colors */
-.legend-quantum,
-.cal-quantum {
-  background: #e0f2fe;
-  border-color: #0284c7;
-}
-
-.legend-colloquium,
-.cal-colloquium {
-  background: #fef3c7;
-  border-color: #d97706;
-}
-
-.legend-conference,
-.cal-conference {
-  background: #ede9fe;
-  border-color: #7c3aed;
-}
-
-.legend-defense,
-.cal-defense {
-  background: #fee2e2;
-  border-color: #b91c1c;
-}
-
-.legend-special,
-.cal-special {
-  background: #dcfce7;
-  border-color: #16a34a;
-}
-
-/* Top bar of calendar (month + arrows) */
-.calendar-header-bar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 0.75rem;
-}
-
-.calendar-month-label {
-  font-weight: bold;
-}
-
-.month-nav {
-  border: 1px solid #ccc;
-  background: #fff;
-  border-radius: 4px;
-  padding: 0.15rem 0.5rem;
-  cursor: default; /* static for now */
-}
-
-/* === MAIN GRID: 7 columns, Sun–Sat in one row === */
-.calendar-grid {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  overflow: hidden;
-  font-size: 0.8rem;
-}
-
-/* Weekday header cells (first row) */
-.calendar-weekday {
-  padding: 0.4rem;
-  background: #f3f4f6;
-  font-weight: 600;
-  text-align: center;
-  border-bottom: 1px solid #ddd;
-}
-
-/* Day cells */
-.calendar-day {
-  min-height: 90px;
-  padding: 0.4rem;
-  border-top: 1px solid #eee;
-  border-right: 1px solid #eee;
-  vertical-align: top;
-}
-
-.calendar-day:nth-child(7n) {
-  border-right: none; /* last column in each row */
-}
-
-.calendar-day.empty {
-  background: #fafafa;
-}
-
-.day-number {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 0.15rem;
-}
-
-.cal-event {
-  margin-top: 0.25rem;
-  padding: 0.25rem 0.35rem;
-  border-radius: 6px;
-  border: 1px solid transparent;
-  line-height: 1.3;
-}
-
-
-/* Wider main only for People page */
-.people-main {
-  max-width: 1200px;
-}
-
-/* Layout: cards on left, filters on right */
-.people-layout {
-  display: grid;
-  grid-template-columns: 3fr 1.2fr;
-  gap: 2rem;
-  margin: 2rem 0 3rem;
-}
-
-/* Filter panel on the right, like Emory Chem */
-.people-filters {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background: #fafafa;
-  font-size: 0.9rem;
-  padding: 1rem 1.25rem;
-  align-self: flex-start;
-  position: sticky;
-  top: 120px; /* adjust if header height changes */
-}
-
-/* Filter headings */
-.people-filters h3 {
-  margin: 0 0 0.5rem;
-  font-size: 0.85rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-
-/* Clean filter-group (no orange stripes) */
-.filter-group {
-  margin-bottom: 1.5rem;
-  padding-top: 0.75rem;
-  border-top: 2px solid #ddd; /* simple divider line */
-  background: none;           /* remove the yellow pattern */
-}
-
-
-.filter-group label {
-  display: block;
-  margin: 0.35rem 0;
-}
-
-.filter-group input[type="checkbox"] {
-  margin-right: 0.4rem;
-}
-
-/* Responsive: filters above cards on small screens */
 @media (max-width: 900px) {
   .people-layout {
     grid-template-columns: 1fr;
   }
 
-  .people-filters h3 {
-  margin: 0 0 0.5rem;
-  font-size: 0.85rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: #333;
-  font-weight: bold;
+  .people-filters {
+    position: static;
   }
 }

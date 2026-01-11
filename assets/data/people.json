@@ -1,0 +1,271 @@
+[
+  {
+    "name": "Wladimir Benalcazar",
+    "role": "Assistant Professor of Physics",
+    "institution": "Emory University, Department of Physics",
+    "field": "Topological phases of matter, quantum materials",
+    "bio": "Focus area: Condensed matter / quantum materials. Add office, email, phone, and group website here.",
+    "campuses": ["emory"],
+    "focus": ["quantum-materials", "theory"],
+    "cardFocusText": "Condensed matter / topological phases",
+    "image": "assets/img/people/benalcazar.jpg"
+  },
+  {
+    "name": "Hayk Harutyunyan",
+    "role": "Professor of Physics",
+    "institution": "Emory University, Department of Physics",
+    "field": "Optics, photonics, quantum light–matter interactions",
+    "bio": "Focus area: Optics / photonics. Add office, email, phone, and group website here.",
+    "campuses": ["emory"],
+    "focus": ["optics"],
+    "cardFocusText": "Optics / photonics",
+    "image": "assets/img/people/harutyunyan.jpg"
+  },
+  {
+    "name": "Jiang-Xiazi Lin",
+    "role": "Assistant Professor of Physics",
+    "institution": "Emory University, Department of Physics",
+    "field": "Quantum materials, low-dimensional systems",
+    "bio": "Focus area: Condensed matter / quantum materials. Add office, email, phone, and group website here.",
+    "campuses": ["emory"],
+    "focus": ["quantum-materials"],
+    "cardFocusText": "Quantum materials",
+    "image": "assets/img/people/lin_jiangxiazi.jpg"
+  },
+  {
+    "name": "Luiz Santos",
+    "role": "Associate Professor of Physics",
+    "institution": "Emory University, Department of Physics",
+    "field": "Correlated electron systems, quantum phases of matter",
+    "bio": "Focus area: Condensed matter / quantum materials. Add office, email, phone, and group website here.",
+    "campuses": ["emory"],
+    "focus": ["quantum-materials", "theory"],
+    "cardFocusText": "Correlated electron systems",
+    "image": "assets/img/people/santos.jpg"
+  },
+  {
+    "name": "Sergei Urazhdin",
+    "role": "Samuel Candler Dobbs Professor of Physics",
+    "institution": "Emory University, Department of Physics",
+    "field": "Spintronics, nanomagnetism, quantum devices",
+    "bio": "Focus area: Condensed matter / spintronics. Add office, email, phone, and group website here.",
+    "campuses": ["emory"],
+    "focus": ["quantum-materials"],
+    "cardFocusText": "Spintronics & nanomagnetism",
+    "image": "assets/img/people/urazhdin.jpg"
+  },
+
+  {
+    "name": "Martin Mourigal",
+    "role": "Professor of Physics",
+    "institution": "Georgia Tech, School of Physics",
+    "field": "Experimental condensed matter, quantum magnetism",
+    "bio": "Focus area: Experimental condensed matter / quantum magnetism. Add office, email, phone, and group website here.",
+    "campuses": ["gatech"],
+    "focus": ["quantum-materials"],
+    "cardFocusText": "Quantum magnetism",
+    "image": "assets/img/people/mourigal.jpg"
+  },
+  {
+    "name": "Zhigang Jiang",
+    "role": "Professor of Physics",
+    "institution": "Georgia Tech, School of Physics",
+    "field": "Experimental condensed matter, quantum magnetism",
+    "bio": "Focus area: Experimental condensed matter / quantum magnetism. Add office, email, phone, and group website here.",
+    "campuses": ["gatech"],
+    "focus": ["quantum-materials", "optics"],
+    "cardFocusText": "Quantum magnetism",
+    "image": "assets/img/people/zhigang.jpg"
+  },
+  {
+    "name": "Chunhui Du",
+    "role": "Associate Professor of Physics",
+    "institution": "Georgia Tech, School of Physics",
+    "field": "Experimental condensed matter, quantum magnetism",
+    "bio": "Focus area: Experimental condensed matter / quantum magnetism. Add office, email, phone, and group website here.",
+    "campuses": ["gatech"],
+    "focus": ["quantum-materials"],
+    "cardFocusText": "Quantum magnetism",
+    "image": "assets/img/people/chunhui.jpg"
+  },
+  {
+    "name": "Hailong Wang",
+    "role": "Assistant Professor of Physics",
+    "institution": "Georgia Tech, School of Physics",
+    "field": "Experimental condensed matter, quantum magnetism",
+    "bio": "Focus area: Experimental condensed matter / quantum magnetism. Add office, email, phone, and group website here.",
+    "campuses": ["gatech"],
+    "focus": ["quantum-materials"],
+    "cardFocusText": "Quantum magnetism",
+    "image": "assets/img/people/hailong.jpg"
+  },
+  {
+    "name": "Phillip First",
+    "role": "Professor of Physics",
+    "institution": "Georgia Tech, School of Physics",
+    "field": "Experimental condensed matter, quantum magnetism",
+    "bio": "Focus area: Experimental condensed matter / quantum magnetism. Add office, email, phone, and group website here.",
+    "campuses": ["gatech"],
+    "focus": ["quantum-materials"],
+    "cardFocusText": "Quantum magnetism",
+    "image": "assets/img/people/phillip.jpg"
+  },
+
+  {
+    "name": "Michael Chapman",
+    "role": "Professor of Physics",
+    "institution": "Georgia Tech, School of Physics",
+    "field": "Experimental condensed matter, quantum magnetism",
+    "bio": "Focus area: Experimental condensed matter / quantum magnetism. Add office, email, phone, and group website here.",
+    "campuses": ["gatech"],
+    "focus": ["amo"],
+    "cardFocusText": "Quantum magnetism",
+    "image": "assets/img/people/michael.jpg"
+  },
+  {
+    "name": "Colin Parker",
+    "role": "Professor of Physics",
+    "institution": "Georgia Tech, School of Physics",
+    "field": "Experimental condensed matter, quantum magnetism",
+    "bio": "Focus area: Experimental condensed matter / quantum magnetism. Add office, email, phone, and group website here.",
+    "campuses": ["gatech"],
+    "focus": ["amo"],
+    "cardFocusText": "Quantum magnetism",
+    "image": "assets/img/people/colin.jpg"
+  },
+  {
+    "name": "Carlos Sa de Melo",
+    "role": "Professor of Physics",
+    "institution": "Georgia Tech, School of Physics",
+    "field": "Experimental condensed matter, quantum magnetism",
+    "bio": "Focus area: Experimental condensed matter / quantum magnetism. Add office, email, phone, and group website here.",
+    "campuses": ["gatech"],
+    "focus": ["amo", "theory", "quantum-materials"],
+    "cardFocusText": "Quantum magnetism",
+    "image": "assets/img/people/carlos.jpg"
+  },
+
+  {
+    "name": "Itamar Kimchi",
+    "role": "Assistant Professor of Physics",
+    "institution": "Georgia Tech, School of Physics",
+    "field": "Experimental condensed matter, quantum magnetism",
+    "bio": "Focus area: Experimental condensed matter / quantum magnetism. Add office, email, phone, and group website here.",
+    "campuses": ["gatech"],
+    "focus": ["theory", "quantum-materials"],
+    "cardFocusText": "Quantum magnetism",
+    "image": "assets/img/people/itamar.jpg"
+  },
+  {
+    "name": "Xueda Wen",
+    "role": "Assistant Professor of Physics",
+    "institution": "Georgia Tech, School of Physics",
+    "field": "Experimental condensed matter, quantum magnetism",
+    "bio": "Focus area: Experimental condensed matter / quantum magnetism. Add office, email, phone, and group website here.",
+    "campuses": ["gatech"],
+    "focus": ["theory", "amo"],
+    "cardFocusText": "Quantum magnetism",
+    "image": "assets/img/people/xueda.jpg"
+  },
+  {
+    "name": "Zhu-Xi Luo",
+    "role": "Assistant Professor of Physics",
+    "institution": "Georgia Tech, School of Physics",
+    "field": "Experimental condensed matter, quantum magnetism",
+    "bio": "Focus area: Experimental condensed matter / quantum magnetism. Add office, email, phone, and group website here.",
+    "campuses": ["gatech"],
+    "focus": ["quantum-materials"],
+    "cardFocusText": "Quantum magnetism",
+    "image": "assets/img/people/zhuxi.jpg"
+  },
+
+  {
+    "name": "Letian Dou",
+    "role": "Paul & Phyllis Fireman Professor of Chemistry",
+    "institution": "Emory University, Department of Chemistry",
+    "field": "Hybrid materials, optoelectronics",
+    "bio": "Focus area: Physical chemistry — experimental. Add office (Atwood 430), email, phone, and group website here.",
+    "campuses": ["emory"],
+    "focus": ["quantum-chemistry"],
+    "cardFocusText": "Hybrid materials & optoelectronics",
+    "image": "assets/img/people/dou.jpg"
+  },
+  {
+    "name": "Michael C. Heaven",
+    "role": "Samuel Candler Dobbs Professor of Chemistry",
+    "institution": "Emory University, Department of Chemistry",
+    "field": "Chemical bonding, transient intermediates, electronic structure",
+    "bio": "Focus area: Physical chemistry — experimental. Add office (Atwood 230), email, phone, and group website here.",
+    "campuses": ["emory"],
+    "focus": ["quantum-chemistry", "amo"],
+    "cardFocusText": "Chemical bonding & electronic structure",
+    "image": "assets/img/people/heaven.jpg"
+  },
+  {
+    "name": "Lili Wang",
+    "role": "Assistant Professor of Chemistry",
+    "institution": "Emory University, Department of Chemistry",
+    "field": "Physical chemistry, spectroscopy",
+    "bio": "Focus area: Physical chemistry — experimental. Add office (Atwood 457), email, phone, and group website here.",
+    "campuses": ["emory"],
+    "focus": ["quantum-chemistry"],
+    "cardFocusText": "quantum dots, molecular spectroscopy",
+    "image": "assets/img/people/lili.jpg"
+  },
+
+  {
+    "name": "Francesco Evangelista",
+    "role": "Winship Distinguished Professor of Chemistry",
+    "institution": "Emory University, Department of Chemistry",
+    "field": "Electronic structure theory, quantum chemistry",
+    "bio": "Focus area: Physical chemistry — theoretical. Add office (Emerson E519), email, phone, and group website here.",
+    "campuses": ["emory"],
+    "focus": ["theory", "quantum-computing", "quantum-chemistry"],
+    "cardFocusText": "Electronic structure theory, quantum computing",
+    "image": "assets/img/people/evangelista.jpg"
+  },
+  {
+    "name": "Fang Liu",
+    "role": "Assistant Professor of Chemistry",
+    "institution": "Emory University, Department of Chemistry",
+    "field": "Theoretical and computational chemistry",
+    "bio": "Focus area: Physical chemistry — theoretical. Add office (Emerson E523), email, phone, and group website here.",
+    "campuses": ["emory"],
+    "focus": ["theory"],
+    "cardFocusText": "Theoretical chemistry, machine learning, high-performance computing",
+    "image": "assets/img/people/fang.jpg"
+  },
+  {
+    "name": "Djamaladdin (Jamal) Musaev",
+    "role": "Associate Faculty, Emerson Center for Scientific Computation",
+    "institution": "Emory University, Department of Chemistry",
+    "field": "Computational catalysis, electronic structure",
+    "bio": "Focus area: Physical chemistry — theoretical. Add office (Emerson Center), email, phone, and group website here.",
+    "campuses": ["emory"],
+    "focus": ["theory"],
+    "cardFocusText": "Computational catalysis, high-performance computing",
+    "image": "assets/img/people/musaev.jpg"
+  },
+  {
+    "name": "Raphael F. Ribeiro",
+    "role": "Assistant Professor of Chemistry",
+    "institution": "Emory University, Department of Chemistry",
+    "field": "Molecular polaritons, quantum dynamics",
+    "bio": "Focus area: Physical chemistry — theoretical. Add office (Emerson E520), email, phone, and group website here.",
+    "campuses": ["emory"],
+    "focus": ["theory", "quantum-chemistry"],
+    "cardFocusText": "Molecular polaritons & quantum dynamics",
+    "image": "assets/img/people/ribeiro.jpg"
+  },
+  {
+    "name": "Yao Wang",
+    "role": "Assistant Professor of Chemistry",
+    "institution": "Emory University, Department of Chemistry",
+    "field": "Theoretical chemistry, materials modeling",
+    "bio": "Focus area: Physical chemistry — theoretical. Add office (Emerson E524), email, phone, and group website here.",
+    "campuses": ["emory"],
+    "focus": ["theory", "quantum-computing", "quantum-materials"],
+    "cardFocusText": "Theoretical chemistry & materials",
+    "image": "assets/img/people/yao.jpg"
+  }
+]

@@ -1,8 +1,4 @@
-/* ============================================================
-   ACCESS CODE LOCK  (optional – remove if not needed)
-   ============================================================ */
-
-const ACCESS_CODE = "quantum2025"; // Change to your code
+const ACCESS_CODE = "quantum2025";
 
 const lockOverlay = document.getElementById("access-lock");
 const codeInput = document.getElementById("access-code-input");
@@ -10,7 +6,6 @@ const codeSubmit = document.getElementById("access-code-submit");
 const errorMsg = document.getElementById("access-error");
 
 if (lockOverlay && codeInput && codeSubmit) {
-
   if (sessionStorage.getItem("aqa-unlocked") === "true") {
     lockOverlay.style.display = "none";
   }
@@ -20,7 +15,7 @@ if (lockOverlay && codeInput && codeSubmit) {
       lockOverlay.style.display = "none";
       sessionStorage.setItem("aqa-unlocked", "true");
     } else {
-      errorMsg.style.display = "block";
+      if (errorMsg) errorMsg.style.display = "block";
     }
   });
 
@@ -29,15 +24,55 @@ if (lockOverlay && codeInput && codeSubmit) {
   });
 }
 
+async function renderPeopleFromJSON() {
+  const grid = document.getElementById("people-grid");
+  if (!grid) return;
 
-/* ============================================================
-   PEOPLE MODAL
-   ============================================================ */
+  try {
+    const res = await fetch("assets/data/people.json", { cache: "no-store" });
+    if (!res.ok) throw new Error(`Failed to load people.json: ${res.status}`);
+    const people = await res.json();
 
-const personCards = document.querySelectorAll(".person-card");
-const personModal = document.getElementById("person-modal");
+    grid.innerHTML = "";
 
-if (personCards.length && personModal) {
+    people.forEach(p => {
+      const card = document.createElement("article");
+      card.className = "person-card";
+
+      card.dataset.campus = (p.campuses || []).join(" ").trim();
+      card.dataset.focus = (p.focus || []).join(" ").trim();
+
+      card.dataset.name = p.name || "";
+      card.dataset.role = p.role || "";
+      card.dataset.institution = p.institution || "";
+      card.dataset.field = p.field || "";
+      card.dataset.bio = p.bio || "";
+
+      const safeName = p.name || "Person";
+      const imgSrc = p.image || "";
+      const cardFocusText = p.cardFocusText || "";
+
+      card.innerHTML = `
+        <img src="${imgSrc}" alt="${safeName}">
+        <h3>${safeName}</h3>
+        <p>Focus: ${cardFocusText}</p>
+      `;
+
+      grid.appendChild(card);
+    });
+
+    initPeopleModal();
+    initPeopleFilters();
+  } catch (err) {
+    console.error(err);
+    grid.innerHTML = `<p style="color:#b91c1c;">Failed to load people data. Check assets/data/people.json</p>`;
+  }
+}
+
+function initPeopleModal() {
+  const personCards = document.querySelectorAll(".person-card");
+  const personModal = document.getElementById("person-modal");
+  if (!personCards.length || !personModal) return;
 
   const nameEl = document.getElementById("modal-name");
   const roleEl = document.getElementById("modal-role");
@@ -52,92 +87,89 @@ if (personCards.length && personModal) {
 
   personCards.forEach(card => {
     card.addEventListener("click", () => {
-      nameEl.textContent = card.dataset.name || "";
-      roleEl.textContent = card.dataset.role || "";
-      instEl.textContent = card.dataset.institution || "";
-      fieldEl.textContent = card.dataset.field || "";
-      bioEl.textContent = card.dataset.bio || "";
+      if (nameEl) nameEl.textContent = card.dataset.name || "";
+      if (roleEl) roleEl.textContent = card.dataset.role || "";
+      if (instEl) instEl.textContent = card.dataset.institution || "";
+      if (fieldEl) fieldEl.textContent = card.dataset.field || "";
+      if (bioEl) bioEl.textContent = card.dataset.bio || "";
       personModal.classList.add("open");
     });
   });
 
-  closeBtn.addEventListener("click", closeModal);
-  backdrop.addEventListener("click", closeModal);
+  if (closeBtn) closeBtn.addEventListener("click", closeModal);
+  if (backdrop) backdrop.addEventListener("click", closeModal);
 
   document.addEventListener("keydown", e => {
     if (e.key === "Escape") closeModal();
   });
 }
 
+function initPeopleFilters() {
+  const campusFilters = document.querySelectorAll(".filter-campus");
+  const focusFilters = document.querySelectorAll(".filter-focus");
+  const allCards = document.querySelectorAll(".person-card");
 
-/* ============================================================
-   PEOPLE FILTERING (school + focus area)
-   ============================================================ */
+  const keywordInput = document.getElementById("people-keyword");
+  const campusModeRadios = document.querySelectorAll('input[name="campus-mode"]');
+  const focusModeRadios = document.querySelectorAll('input[name="focus-mode"]');
 
-const campusFilters = document.querySelectorAll(".filter-campus");
-const roleFilters = document.querySelectorAll(".filter-role");  // optional future use
-const focusFilters = document.querySelectorAll(".filter-focus");
-const allCards = document.querySelectorAll(".person-card");
+  function applyPeopleFilters() {
+    if (!allCards.length) return;
 
-function applyPeopleFilters() {
-  if (!allCards.length) return;
+    const selectedCampuses = Array.from(campusFilters)
+      .filter(cb => cb.checked)
+      .map(cb => cb.value);
 
-  const selectedCampuses = Array.from(campusFilters)
-    .filter(cb => cb.checked)
-    .map(cb => cb.value);
+    const selectedFocus = Array.from(focusFilters)
+      .filter(cb => cb.checked)
+      .map(cb => cb.value);
 
-  const selectedFocus = Array.from(focusFilters)
-    .filter(cb => cb.checked)
-    .map(cb => cb.value);
+    const campusMode =
+      document.querySelector('input[name="campus-mode"]:checked')?.value || "any";
+    const focusMode =
+      document.querySelector('input[name="focus-mode"]:checked')?.value || "any";
 
-  allCards.forEach(card => {
-    const cardCampusList = card.dataset.campus.split(' ');
-    const cardFocusList = card.dataset.focus.split(' ');
-    const showCampus = (selectedCampuses.length === 0) || selectedCampuses.some(campus => cardCampusList.includes(campus));
-    const showFocus = (selectedFocus.length === 0) || selectedFocus.some(focus => cardFocusList.includes(focus));
+    const kw = (keywordInput?.value || "").trim().toLowerCase();
 
-    if (showCampus && showFocus) {
-      card.style.display = ""; // Set display to default (which is "block" via CSS grid)
-    } else {
-      card.style.display = "none";
-    }
+    allCards.forEach(card => {
+      const cardCampusList = (card.dataset.campus || "").split(" ").filter(Boolean);
+      const cardFocusList = (card.dataset.focus || "").split(" ").filter(Boolean);
 
-  });
-}
+      const showCampus =
+        selectedCampuses.length === 0 ||
+        (campusMode === "all"
+          ? selectedCampuses.every(c => cardCampusList.includes(c))
+          : selectedCampuses.some(c => cardCampusList.includes(c)));
 
-if (allCards.length) {
+      const showFocus =
+        selectedFocus.length === 0 ||
+        (focusMode === "all"
+          ? selectedFocus.every(f => cardFocusList.includes(f))
+          : selectedFocus.some(f => cardFocusList.includes(f)));
+
+      const haystack = [
+        card.dataset.name,
+        card.dataset.role,
+        card.dataset.institution,
+        card.dataset.field,
+        card.dataset.bio
+      ].join(" ").toLowerCase();
+
+      const showKeyword = kw.length === 0 || haystack.includes(kw);
+
+      card.style.display = (showCampus && showFocus && showKeyword) ? "block" : "none";
+    });
+  }
+
   [...campusFilters, ...focusFilters].forEach(cb =>
     cb.addEventListener("change", applyPeopleFilters)
   );
+
+  if (keywordInput) keywordInput.addEventListener("input", applyPeopleFilters);
+  campusModeRadios.forEach(r => r.addEventListener("change", applyPeopleFilters));
+  focusModeRadios.forEach(r => r.addEventListener("change", applyPeopleFilters));
+
   applyPeopleFilters();
 }
 
-
-/* ============================================================
-   EVENTS — LIST / CALENDAR TOGGLE
-   ============================================================ */
-
-const viewButtons = document.querySelectorAll(".view-btn");
-const eventViews = document.querySelectorAll(".event-view");
-
-if (viewButtons.length && eventViews.length) {
-  viewButtons.forEach(btn => {
-    btn.addEventListener("click", () => {
-
-      const target = btn.dataset.view;
-
-      // Set active button
-      viewButtons.forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
-
-      // Show matching event view
-      eventViews.forEach(view => {
-        if (view.id === `events-${target}`) {
-          view.classList.add("active");
-        } else {
-          view.classList.remove("active");
-        }
-      });
-    });
-  });
-}
+renderPeopleFromJSON();
