@@ -397,8 +397,9 @@ footer {
   color: #333;
   font-weight: bold;
   }
+}
 
-  /* ============================================== */
+/* ============================================== */
   /* Additions for OR Logic Filtering (CSS :has() style) */
   /* ============================================== */
   
@@ -449,4 +450,3 @@ footer {
   .people-layout:has(input[value="quantum-computing"]:checked) .person-card[data-focus~="quantum-computing"] {
       display: block;
   }
-}
