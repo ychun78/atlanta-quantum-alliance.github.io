@@ -72,6 +72,7 @@ footer {
   cursor: pointer;
   background: #fff;
   transition: box-shadow 0.15s ease, transform 0.15s ease;
+  display: none;
 }
 
 .person-card img {
@@ -395,5 +396,57 @@ footer {
   text-transform: uppercase;
   color: #333;
   font-weight: bold;
+  }
+
+  /* ============================================== */
+  /* Additions for OR Logic Filtering (CSS :has() style) */
+  /* ============================================== */
+  
+  /* Rule structure:
+     Select the main container (:has a checked checkbox) then target the person card
+     that matches that value in its data-focus attribute. */
+  
+  /* === School Filters === */
+  
+  /* If Emory is checked, display cards that have "emory" in data-campus */
+  .people-layout:has(input[value="emory"]:checked) .person-card[data-campus~="emory"] {
+      display: block;
+  }
+  
+  /* If Georgia Tech is checked, display cards that have "gatech" in data-campus */
+  .people-layout:has(input[value="gatech"]:checked) .person-card[data-campus~="gatech"] {
+      display: block;
+  }
+  
+  /* === Focus Area Filters (from your image) === */
+  
+  /* If Quantum Materials is checked */
+  .people-layout:has(input[value="quantum-materials"]:checked) .person-card[data-focus~="quantum-materials"] {
+      display: block;
+  }
+  
+  /* If Quantum Optics is checked */
+  .people-layout:has(input[value="optics"]:checked) .person-card[data-focus~="optics"] {
+      display: block;
+  }
+  
+  /* If AMO is checked */
+  .people-layout:has(input[value="amo"]:checked) .person-card[data-focus~="amo"] {
+      display: block;
+  }
+  
+  /* If Quantum Chemistry is checked */
+  .people-layout:has(input[value="quantum-chemistry"]:checked) .person-card[data-focus~="quantum-chemistry"] {
+      display: block;
+  }
+  
+  /* If Theory and Computation is checked */
+  .people-layout:has(input[value="theory"]:checked) .person-card[data-focus~="theory"] {
+      display: block;
+  }
+  
+  /* If Quantum Computing is checked */
+  .people-layout:has(input[value="quantum-computing"]:checked) .person-card[data-focus~="quantum-computing"] {
+      display: block;
   }
 }
