@@ -90,6 +90,9 @@ function applyPeopleFilters() {
     .filter(cb => cb.checked)
     .map(cb => cb.value);
 
+  const noCampusSelected = selectedCampuses.length === 0;
+  const noFocusSelected = selectedFocus.length === 0;
+
   allCards.forEach(card => {
     const cardCampusList = card.dataset.campus.split(' ');
     const cardFocusList = card.dataset.focus.split(' ');
