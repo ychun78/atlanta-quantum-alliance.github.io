@@ -90,14 +90,11 @@ function applyPeopleFilters() {
     .filter(cb => cb.checked)
     .map(cb => cb.value);
 
-  const noCampusSelected = selectedCampuses.length === 0;
-  const noFocusSelected = selectedFocus.length === 0;
-
   allCards.forEach(card => {
     const cardCampusList = card.dataset.campus.split(' ');
     const cardFocusList = card.dataset.focus.split(' ');
-    const showCampus = selectedCampuses.some(campus => cardCampusList.includes(campus));
-    const showFocus = selectedFocus.some(focus => cardFocusList.includes(focus));
+    const showCampus = (selectedCampuses.length === 0) || selectedCampuses.some(campus => cardCampusList.includes(campus));
+    const showFocus = (selectedFocus.length === 0) || selectedFocus.some(focus => cardFocusList.includes(focus));
 
     if (showCampus && showFocus) {
       card.style.display = ""; // Set display to default (which is "block" via CSS grid)
