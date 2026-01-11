@@ -91,17 +91,17 @@ function applyPeopleFilters() {
     .map(cb => cb.value);
 
   allCards.forEach(card => {
-    const cardCampus = card.dataset.campus;
-    const cardFocus = card.dataset.focus;
-
-    const showCampus = selectedCampuses.includes(cardCampus);
-    const showFocus = selectedFocus.includes(cardFocus);
+    const cardCampusList = card.dataset.campus.split(' ');
+    const cardFocusList = card.dataset.focus.split(' ');
+    const showCampus = selectedCampuses.some(campus => cardCampusList.includes(campus));
+    const showFocus = selectedFocus.some(focus => cardFocusList.includes(focus));
 
     if (showCampus && showFocus) {
-      card.style.display = "";
+      card.style.display = ""; // Set display to default (which is "block" via CSS grid)
     } else {
       card.style.display = "none";
     }
+
   });
 }
 
